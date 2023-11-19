@@ -1,0 +1,472 @@
+/*Mobile First*/
+p{
+    margin-bottom: 0rem !important;
+}
+/*Navbar*/
+/*Iniciar/CrearUsuario*/
+.headerIni-Crear{
+    text-align: center;
+    padding: 2.5rem 0 2.5rem 0;
+    background: rgb(9,121,88);
+    background: linear-gradient(339deg, rgba(9,121,88,1) 0%, rgba(218,255,196,1) 100%);
+    color: #406D31;
+}
+
+
+/*Boton*/
+.boton{
+    text-decoration: none;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #2E605C;
+    color: white;
+}
+.boton:hover{
+    background-color:#24524e;
+}
+.boton:active{
+    background-color:#1c4441;
+}
+
+
+/*Index*/
+.backgroundDegrade{
+    background: rgb(15,84,93);
+    background: linear-gradient(339deg, rgba(15,84,93,1) 0%, rgba(9,121,88,1) 44%, rgba(218,255,196,1) 100%);
+}
+.encabezadoImg{
+    position: relative;
+    display: inline-block;
+}
+.textEncabezado{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    color: white;
+}
+.descrIndex{
+    margin: 1rem 1.5rem 1rem 1.5rem;
+}
+.descrIndex p{
+    padding-bottom: 1rem ;
+}
+.imgIndex{
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+.imgIndex img{
+    width: 100px;
+}
+
+
+/*Nosotros*/
+.encabezadoNosotros{
+    position: relative;
+    display: inline-block;
+}
+.encabezadoNosotros img{
+    width: 100%;
+    height: 500px;
+    opacity: 0.2;
+    object-fit: cover;
+}
+.textEncabezadoNosotros{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 60%;
+}
+.textEncabezadoNosotros p{
+    font-weight: 500;
+}
+.backgroundSolido{
+    background-color: #0C2323;
+    color: #6DCD9A;
+}
+.nosotrosBajo{
+    padding: 2rem 1.5rem 2rem 1.5rem;
+}
+
+
+/*Productos*/
+.cajasProd{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+.cajasProd p{
+    font-size: smaller;
+}
+.colText{
+    width: 60%;
+}
+.colImg{
+    width: 40%;
+}
+
+
+/*Contacto*/
+.contacto{
+    margin: 1rem 2rem 1rem 2rem;
+    color: #31241E;
+}
+.formularios{
+    display: flex;
+    justify-content: center;
+    text-align: end;
+    padding-top: 2rem;
+}
+.ingresoDato{
+    margin: 0.25rem 0 0.25rem 0;
+    background-color: #0C2323;
+    border: none;
+}
+
+.formularios ::placeholder{
+    color: #6DCD9A;
+    font-size: x-small;
+}
+.contactoAbajo{
+    text-align: center ;
+}
+.contactoAbajoCen{
+    display: inline-block;
+    text-align: start;
+}
+
+
+/*Administrador*/
+.admText{
+    padding: 5rem 2rem 5rem 2rem;
+}
+.admBotones{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+
+/*Post / Usuario*/
+.encabezadoAdm{
+    position: relative;
+    display: inline-block;
+}
+.encabezadoAdm div{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+}
+.encabezadoAdm h1{
+    font-size:larger;
+}
+.tabla{
+    padding:3rem 0rem 3rem 0rem ;
+    display: flex;
+    justify-content: center;
+}
+.tabla th{
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid black;
+}
+.tabla2{
+    padding:3rem 0rem 3rem 0rem ;
+    display: flex;
+    justify-content: center;
+}
+.tabla2 th{
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+/*IniciarSesion/CrearUsuario*/
+.botonIniSes{
+    text-align: center;
+    padding: 1.5rem 0 6rem 0;
+}
+
+/*Footer*/
+footer{
+    padding: 2rem 0 2rem 0;
+    background-color: #2F605C;
+}
+footer p{
+    margin-bottom: 0;
+    font-size: small;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    border: white 0.1rem solid;
+    color: white;
+}
+.cajaFooter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cajasF{
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+}
+.objetoF{
+    margin: 0 0.3rem 0 0.3rem;
+}
+
+
+/*Tablets*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+    /*Index*/
+    .encabezadoImg{
+        margin:0 3rem 0 3rem;
+    }
+    .descrIndex{
+        margin: 1.5rem 3.5rem 0 3rem;
+        width: 70%;
+    }
+    .imgIndex{
+        padding: 3rem 0 3rem 0;
+    }
+    .imgIndex img{
+        width: 200px;
+        height: 200px;
+    }
+
+
+    /*Nosotros*/
+    .encabezadoNosotros{
+        width: 100%;
+    }
+    .encabezadoNosotros img{
+        justify-content: center;
+        opacity: 0.2;
+        object-fit: cover;
+    }
+    .nosotrosBajo{
+        padding: 4rem 5rem 4rem 5rem;
+    }
+    .nosotrosBajo h2{
+        font-size: xx-large;
+        font-weight: 200;
+        width: 75%;
+    }
+    .nosotrosBajo img{
+        width: 80%;
+        margin: 0 4rem 0 4rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    /*Productos*/
+    .cajasProd{
+        padding: 2rem 4rem 2rem 4rem;
+    }
+    .cajasProd p{
+        font-size:large;
+    }
+    .colText{
+        width: 50%;
+    }
+    .colImg{
+        width: 50%;
+        text-align: center;
+    }
+    .colImg img{
+        width: 250px;
+        height: 300px;
+    }
+
+
+    /*Contacto*/
+    .contacto{
+        margin: 4rem 4rem 1rem 4rem;
+    }
+    .ingresoDato{
+        width: 20rem;
+    }
+    .formularios ::placeholder{
+        font-size: small
+    }
+    .contactoAbajo{
+        margin: 4rem 0 6rem 0;
+    }
+
+
+    /*IniciarSesion/CrearUsuario*/
+    .crearUsuario{
+        padding: 4rem 0 6rem 0;
+    }
+
+
+    /*Administracion*/
+    .admImg{
+        margin: 0 3rem 0 3rem;  
+    }
+    .admText{
+        margin: 1.5rem 3.5rem 0 3rem;
+        width:85%; 
+    }
+    .admText p{
+        padding-bottom: 4rem;
+    }
+    .admText{
+        padding-bottom: 7rem;
+    }
+
+
+    /*Post / Usuario*/
+    .encabezadoAdm{
+        margin:0 3rem 0 3rem;
+        
+    }
+    .encabezadoAdm h1{
+        font-size:x-large;
+    }
+    .admBotones{
+        margin: 5rem 0 3rem 0;
+    }
+    .tabla{
+        padding:3rem 0rem 6rem 0rem ;
+    }
+    .tabla th{
+        padding: 0.5rem 2rem 0.5rem 2rem;
+    }
+    .tabla2{
+        padding:3rem 0rem 6rem 0rem ;
+    }
+    .tabla2 th{
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    }
+}
+
+
+/*Desktop*/
+@media only screen and (min-device-width: 1024px){
+    /*Index*/
+    .encabezadoImg{
+        margin:0 11rem 0 11rem;
+        text-align: center;
+    }
+    .encabezadoImg img{
+        width: 100vw;
+    }
+    .infoIndex{
+        display: flex;
+        margin: 4rem 10rem 0rem 10rem;
+    }
+    .descrIndex{
+        width: 50%;
+        font-size: x-large;
+    }
+    .imgIndex{
+        width: 50%;
+    }
+    .imgIndex img{
+        width: 200px;
+        height: 200px;
+    }
+
+
+    /*Nosotros*/
+    .encabezadoNosotros{
+        width: 100%;
+    }
+    .encabezadoNosotros img{
+        justify-content: center;
+        opacity: 0.2;
+        height: 900px;
+    }
+    .textEncabezadoNosotros{
+        font-size: xx-large;
+    }
+    .nosotrosBajo{
+        padding: 4rem 6rem 5rem 6rem;
+    }
+    .nosotrosBajo img{
+        margin: 3rem 5rem 3rem 5rem;
+        width: 50%;
+    }
+    
+
+    /*Productos*/
+    .contenedor{
+        display: flex;
+        padding: 4rem 11rem 4rem 11rem;
+    }
+    .cajasProd{
+        width: 50%;
+    }
+    .colText{
+        width: 50%;
+        font-size: x-large;
+    }
+    .colImg{
+        width: 50%;
+        text-align: center;
+    }
+    .colImg img{
+        width: 400px;
+        height: 450px;
+    }
+
+
+    /*Contacto*/
+    .contenedorContacto{
+        display: flex;
+        align-items: center;
+    }
+    .contacto{
+        width: 50%;
+        margin: 6rem 6rem 6rem 4rem;
+    }
+    .formContacto{
+        width: 50%;
+        margin: 6rem 4rem 6rem 6rem;
+    }
+    .ingresoDato{
+        width: 25rem;
+        height: 2.2rem;
+    }
+    .formularios textarea{
+        height: 6rem !important;
+    }
+    .contactoAbajo{
+        margin: 2rem 0 6rem 0;
+    }
+
+
+    /*Post / Usuario*/
+    .admImg{
+        margin:0 11rem 0 11rem;
+        text-align: center;
+    }
+    .admImg img{
+        width: 100vw;
+        max-height: 350;
+    }
+    .admText{
+        margin-left: 10rem;
+    }
+    .admBotones{
+        padding-top: 3rem;
+    }
+    .encabezadoAdm{
+        margin:0 11rem 0 11rem;
+        text-align: center;
+    }
+    .encabezadoAdm img{
+        width: 100vw;
+        max-height: 350;
+    }
+    .tabla th{
+        padding: 0.7rem 3rem 0.7rem 3rem;
+    }
+    .tabla2 th{
+        padding: 0.7rem 3rem 0.7rem 3rem;
+    }
+}
