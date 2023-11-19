@@ -1,6 +1,6 @@
-<?php
-require_once("header.php");
-?>
+@extends('layouts.app')
+
+@section('content')
 <main class="backgroundDegrade">
     <section id="celulares">
         <div class="encabezadoImg">
@@ -36,6 +36,6 @@ require_once("header.php");
         <!--Otras categorias-->
     </section>
 </main>
-<?php
-require_once("footer.php");
-?>
+@include('footer')
+
+@endsection

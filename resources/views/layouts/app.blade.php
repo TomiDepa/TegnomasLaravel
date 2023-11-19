@@ -45,20 +45,13 @@
                                 <a class="nav-link" href="/nosotros">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="articulos.php">Articulos</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="productos.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Productos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="productos.php#celulares">Celulares</a></li>
-                                    <li><a class="dropdown-item" href="productos.php#auriculares">Auriculares</a></li>
-                                    <li><a class="dropdown-item" href="productos.php#consolas">Consolas</a></li>
-                                </ul>
+                                <a class="nav-link" href="/articulos">Articulos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contacto.php">Contacto</a>
+                                <a class="nav-link" href="/productos">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contacto">Contacto</a>
                             </li>
                             @guest
                             @if (Route::has('login'))

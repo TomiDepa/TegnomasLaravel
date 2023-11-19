@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ArticulosController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NosotrosController;
+use App\Http\Controllers\ProductosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,4 +28,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/index',IndexController::class);
 
 Route::resource('/nosotros',NosotrosController::class);
+
+Route::resource('/articulos',ArticulosController::class);
+
+Route::resource('/productos',ProductosController::class);
+
+Route::resource('/contacto',ContactoController::class);
 

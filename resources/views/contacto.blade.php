@@ -1,6 +1,6 @@
-<?php
-require_once("header.php");
-?>
+@extends('layouts.app')
+
+@section('content')
 <main>
     <div class="contenedorContacto">
         <section class="contacto">
@@ -35,6 +35,6 @@ require_once("header.php");
         </div>
     </section>
 </main>
-<?php
-require_once("footer.php");
-?>
+@include('footer')
+
+@endsection
