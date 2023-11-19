@@ -10,7 +10,7 @@
             Bienvenido al administrador del sitio TECGNOMAS. Desde acá podrás administrar la base de datos de tus productos y usuarios. Podrás agregar, modificar, borrar, o asignar roles desde aquí.
         </p>
         <div class="admBotones">
-            <a href="/admPost" class="boton">POST</a>
+            <a href="/posts" class="boton">POST</a>
             <a href="/admUsuario" class="boton">USUARIOS</a>
         </div>
     </section>

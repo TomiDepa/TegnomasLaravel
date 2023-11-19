@@ -4,8 +4,8 @@
         <div class="cajaFooter">
             <div class="cajasF">
                 <p class="objetoF">Contacto</p>
-                <a href="contacto.php" class="objetoF"><img src="{{ asset('img/carta.png') }}" alt="Carta"></a>
-                <a href="contacto.php" class="objetoF"><img src="{{ asset('img/telefono.png') }}" alt="Telefono"></a>
+                <a href="/contacto" class="objetoF"><img src="{{ asset('img/carta.png') }}" alt="Carta"></a>
+                <a href="/contacto" class="objetoF"><img src="{{ asset('img/telefono.png') }}" alt="Telefono"></a>
             </div>
             <div class="cajasF">
                 <p class="objetoF">Siguenos</p>
