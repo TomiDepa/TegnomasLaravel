@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\AdministracionController;
 use App\Http\Controllers\ArticulosController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NosotrosController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,3 +39,8 @@ Route::resource('/productos',ProductosController::class);
 
 Route::resource('/contacto',ContactoController::class);
 
+Route::resource('/administracion',AdministracionController::class);
+
+Route::resource('/admPost',PostController::class);
+
+Route::resource('/admUsuario',UserController::class);
