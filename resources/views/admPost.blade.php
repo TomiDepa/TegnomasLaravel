@@ -1,6 +1,6 @@
-<?php
-require_once("headerAdm.php");
-?>
+@extends('layouts.app')
+
+@section('content')
 <main class="backgroundSolido">
     <section class="encabezadoAdm">
         <img src="img/database.png" alt="Database" class="img-fluid">
@@ -53,6 +53,6 @@ require_once("headerAdm.php");
         </div>
     </section>
 </main>
-<?php
-require_once("footer.php");
-?>
+@include('footer')
+
+@endsection
