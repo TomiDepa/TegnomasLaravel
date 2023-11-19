@@ -4,7 +4,7 @@ require_once("header.php");
 <main class="backgroundDegrade">
     <section id="celulares">
         <div class="encabezadoImg">
-            <img src="img/celulares.png" alt="Celulares" class="img-fluid">
+            <img src="{{ asset('img/celulares.png') }}" alt="Celulares" class="img-fluid">
             <div class="textEncabezado">
                 <h2>Celulares</h2>
             </div>

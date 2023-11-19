@@ -3,7 +3,7 @@ require_once("headerAdm.php");
 ?>
 <main class="backgroundSolido">
     <section class="EncabezadoAdm">
-        <img src="img/database.png" alt="Database" class="img-fluid">
+        <img src="{{ asset('img/database.png') }}" alt="Database" class="img-fluid">
         <div>
             <h1>Administración Usuarios</h1>
         </div>

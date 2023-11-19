@@ -4,14 +4,14 @@
         <div class="cajaFooter">
             <div class="cajasF">
                 <p class="objetoF">Contacto</p>
-                <a href="contacto.php" class="objetoF"><img src="img/carta.png" alt="Carta"></a>
-                <a href="contacto.php" class="objetoF"><img src="img/telefono.png" alt="Telefono"></a>
+                <a href="contacto.php" class="objetoF"><img src="{{ asset('img/carta.png') }}" alt="Carta"></a>
+                <a href="contacto.php" class="objetoF"><img src="{{ asset('img/telefono.png') }}" alt="Telefono"></a>
             </div>
             <div class="cajasF">
                 <p class="objetoF">Siguenos</p>
-                <a href="#" class="objetoF"><img src="img/instagram.png" alt="Instagram" class="img-fluid"></a>
-                <a href="#" class="objetoF"><img src="img/facebook.png" alt="Facebook" class="img-fluid"></a>
-                <a href="#" class="objetoF"><img src="img/Twitter.png" alt="Twitter" class="img-fluid"></a>
+                <a href="#" class="objetoF"><img src="{{ asset('img/instagram.png') }}" alt="Instagram" class="img-fluid"></a>
+                <a href="#" class="objetoF"><img src="{{ asset('img/facebook.png') }}" alt="Facebook" class="img-fluid"></a>
+                <a href="#" class="objetoF"><img src="{{ asset('img/Twitter.png') }}" alt="Twitter" class="img-fluid"></a>
             </div>
         </div>     
     </section>
