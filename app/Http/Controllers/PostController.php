@@ -11,11 +11,15 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($vista)
     {
-        return view('admPost');
+        if ($vista=== 'admPost'){
+            return view('admPost');
+        } else {
+            return view('paginaArticulo');
+        }
+        
     }
-
     /**
      * Show the form for creating a new resource.
      */

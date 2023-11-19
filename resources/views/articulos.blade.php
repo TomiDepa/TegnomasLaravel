@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <span class="position-relative top-0 start-0 tm-new-badge">Nuevo</span>
                     <h5 class="card-title">Rápida, economica, y confiable, la Asus 300 esta aqui para quedarse</h5>
-                    <p class="card-text">El chasis se ha rediseñado para 2023 y ahora es un 4,5% más pequeño que el diseño anterior...<a href="pagArticulos/articulo1.php">Ver más</a></p>
+                    <p class="card-text">El chasis se ha rediseñado para 2023 y ahora es un 4,5% más pequeño que el diseño anterior...<a href="/paginaArticulo">Ver más</a></p>
                     
                     <div class="d-flex justify-content-between tm-pt-45">
                         <span class="tm-color-primary">Computadoras. Reseñas. Gama Alta</span>

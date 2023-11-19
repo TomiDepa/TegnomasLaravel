@@ -21,15 +21,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
- 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('/index',IndexController::class);
+Route::resource('/',IndexController::class);
 
 Route::resource('/nosotros',NosotrosController::class);
 
@@ -39,8 +33,10 @@ Route::resource('/productos',ProductosController::class);
 
 Route::resource('/contacto',ContactoController::class);
 
+Auth::routes();
+
 Route::resource('/administracion',AdministracionController::class);
 
-Route::resource('/admPost',PostController::class);
-
 Route::resource('/admUsuario',UserController::class);
+
+Route::resource('/{vista}',PostController::class);
