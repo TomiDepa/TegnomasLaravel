@@ -5,7 +5,7 @@
 <main class="backgroundDegrade">
     <section>
         <div class="encabezadoImg">
-            <img src="img/laptop.png" alt="Laptop" class="img-fluid">
+            <img src="{{ asset('img/laptop.png') }}" alt="Laptop" class="img-fluid">
             <div class="textEncabezado">
                 <!--<h1>Laptops</h1>-->
             </div>
@@ -19,9 +19,9 @@
             <a href="nosotros.php" class="boton">LEER MAS</a>
         </section>
         <section class="imgIndex">
-            <a href="productos.php"><img src="img/celu.png" alt="Iphone 14 Pro Max" class="img-fluid"></a>
-            <a href="producyos.php"><img src="img/auris.png" alt="Auriculares" class="img-fluid"></a>
-            <a href="productos.php"><img src="img/mando.png" alt="Mando Xbox" class="img-fluid"></a>
+            <a href="productos.php"><img src="{{ asset('img/celu.png') }}" alt="Iphone 14 Pro Max" class="img-fluid"></a>
+            <a href="producyos.php"><img src="{{ asset('img/auris.png') }}" alt="Auriculares" class="img-fluid"></a>
+            <a href="productos.php"><img src="{{ asset('img/mando.png') }}" alt="Mando Xbox" class="img-fluid"></a>
         </section>
     </section>
 </main>

@@ -4,7 +4,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4 caja-articulos p-3">
         <div class="col">
             <div class="card text-bg-success">
-                <img src="img/Large_budget_1.jpg" class="card-img-top" alt="Asus 300">
+                <img src="{{ asset('img/Large_budget_1.jpg') }}" class="card-img-top" alt="Asus 300">
                 <div class="card-body">
                     <span class="position-relative top-0 start-0 tm-new-badge">Nuevo</span>
                     <h5 class="card-title">Rápida, economica, y confiable, la Asus 300 esta aqui para quedarse</h5>
@@ -24,7 +24,7 @@
         </div>
         <div class="col">
             <div class="card text-bg-success">
-                <img src="img/Large_budget_2.jpg" class="card-img-top" alt="Asus Tuf Gaming">
+                <img src="{{ asset('img/Large_budget_2.jpg') }}" class="card-img-top" alt="Asus Tuf Gaming">
                 <div class="card-body">
                     <span class="position-relative top-0 start-0 tm-new-badge">Nuevo</span>
                     <h5 class="card-title">Conoce la laptop que es usada oficialmente por los cuerpos de Marines desplegados</h5>
@@ -43,7 +43,7 @@
         </div>
         <div class="col">
             <div class="card text-bg-success">
-                <img src="img/Low_budget_1.jpg" class="card-img-top" alt="Acer Aspire 3">
+                <img src="{{ asset('img/Low_budget_1.jpg') }}" class="card-img-top" alt="Acer Aspire 3">
                 <div class="card-body">
                     <h5 class="card-title">La Acer Aspire 3, lo mejor que tiene Asus por menos de 300 USD</h5>
                     <p class="card-text">El portátil Aspire 3 (A315-24P; 399 $) de Acer ha avanzado casi sin cambios a lo largo de varias generaciones de hardware , pero eso no es necesariamente malo.... <!-- Se trata de un portátil económico, sencillo y eficaz, con un precio inicial bajo. En este nivel de presupuesto, la prioridad es simplemente conseguir una máquina que funcione. El Acer Aspire 3 cumple ese requisito, aunque no tenga mucho margen de maniobra: Hay portátiles más capaces justo por encima de él en precio, como el Lenovo IdeaPad Flex 5i y el Dell Inspiron 15 (3525), que están a la venta intermitentemente por 500 dólares.!--></p>
@@ -61,7 +61,7 @@
         </div>
         <div class="col">
             <div class="card text-bg-success">
-                <img src="img/High_budget_headphones.jpg" class="card-img-top" alt="Focal Bathys">
+                <img src="{{ asset('img/High_budget_headphones.jpg') }}" class="card-img-top" alt="Focal Bathys">
                 <div class="card-body">
                     <span class="position-relative top-0 start-0 tm-new-badge">Nuevo</span>
                     <h5 class="card-title">La caja de sorpresas que cambiará tu forma de escuchar música</h5>

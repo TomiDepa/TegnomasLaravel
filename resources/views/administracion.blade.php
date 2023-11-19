@@ -3,7 +3,7 @@
 @section('content')
 <main class="backgroundSolido">
     <section class="admImg">
-        <img src="img/database.png" alt="Database" class="img-fluid">
+        <img src="{{ asset('img/database.png') }}" alt="Database" class="img-fluid">
     </section>
     <section class="admText">
         <p>
