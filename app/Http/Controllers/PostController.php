@@ -11,21 +11,17 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($vista)
+    public function index()
     {
-        if ($vista=== 'admPost'){
-            return view('admPost');
-        } else {
-            return view('paginaArticulo');
-        }
-        
+        $posts = Post::all();
+        return view('Posts.admPost', compact('posts'));
     }
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view('Posts.create');
     }
 
     /**
@@ -33,7 +29,8 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        //
+        Post::create($request->all());
+        return redirect(route('Posts.admPost'));
     }
 
     /**
@@ -41,7 +38,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('Posts.show', compact('post'));
     }
 
     /**
@@ -49,7 +46,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('Posts.edit', compact('post'));
     }
 
     /**
@@ -57,7 +54,8 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $post->update($request->all());
+        return redirect()->route('Posts.admPost');
     }
 
     /**

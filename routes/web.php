@@ -37,6 +37,6 @@ Auth::routes();
 
 Route::resource('/administracion',AdministracionController::class);
 
-Route::resource('/admUsuario',UserController::class);
+Route::resource('/posts',PostController::class);
 
-Route::resource('/{vista}',PostController::class);
+Route::resource('/admUsuario',UserController::class);
