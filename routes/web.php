@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\NosotrosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/index',IndexController::class);
+
+Route::resource('/nosotros',NosotrosController::class);
 
