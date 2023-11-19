@@ -1,6 +1,5 @@
-<?php
-require_once("header.php");
-?>
+@extends('layouts.app')
+@section('content')
 <main class="tm-main backgroundDegrade container-fluid">
     <div class="row row-cols-1 row-cols-md-3 g-4 caja-articulos p-3">
         <div class="col">
@@ -80,6 +79,5 @@ require_once("header.php");
             </div>
         </div> 
 </main>
-<?php
-require_once("footer.php");
-?>
+@include('footer')
+@endsection
