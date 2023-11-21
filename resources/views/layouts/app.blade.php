@@ -27,7 +27,7 @@
         background: linear-gradient(339deg, rgba(9,121,88,1) 0%, rgba(218,255,196,1) 100%);
         padding:2rem 0 2rem 0;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="img/Logo.PNG" alt="logo" width="50" height="50">Tegnomas</a>
+                <a class="navbar-brand" href="/"><img src="{{ asset('img/Logo.PNG') }}" alt="logo" width="50" height="50">Tegnomas</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

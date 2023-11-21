@@ -39,4 +39,6 @@ Route::resource('/administracion',AdministracionController::class);
 
 Route::resource('/posts',PostController::class);
 
+
+
 Route::resource('/admUsuario',UserController::class);
