@@ -4,7 +4,7 @@
 <main class="backgroundDegrade articulo">
     <section class="p-3">
         <div class="contenedor-imagen">
-            <img src="img/Large_budget_1.jpg" class="img-fluid" alt="Asus 300">
+            <img src="../img/Large_budget_1.jpg" class="img-fluid" alt="Asus 300">
         </div>
         <div>
             <h2>{{ $post->titulo }}</h2>
@@ -48,8 +48,8 @@
                             <div class="col-lg-5 text-sm-center">
                                 <div class="botones-comentarios">
                                     <div>
-                                        <button class="boton"><img src="img/me-gusta.png" alt="Me gusta"></button>
-                                        <button class="boton"><img src="img/no-me-gusta.png" alt="Me gusta"></button>
+                                        <button class="boton"><img src="../img/me-gusta.png" alt="Me gusta"></button>
+                                        <button class="boton"><img src="../img/no-me-gusta.png" alt="Me gusta"></button>
                                     </div>
                                     <div>
                                         <button class="boton">Responder</button>
