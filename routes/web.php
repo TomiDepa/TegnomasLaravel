@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Auth::routes();
 
 Route::resource('/',IndexController::class);
 
@@ -33,12 +33,8 @@ Route::resource('/productos',ProductosController::class);
 
 Route::resource('/contacto',ContactoController::class);
 
-Auth::routes();
-
 Route::resource('/administracion',AdministracionController::class);
 
 Route::resource('/posts',PostController::class);
-
-
 
 Route::resource('/admUsuario',UserController::class);
