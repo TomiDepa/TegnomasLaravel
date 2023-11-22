@@ -18,6 +18,6 @@ class Post extends Model
     }
 
     public function categoria(){
-        return $this->belongsToMany(Categoria::class);
+        return $this->hasMany(Categoria::class);
     }
 }
