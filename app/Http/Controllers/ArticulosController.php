@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class ArticulosController extends Controller
 {
     public function index() {
-        return view('articulos');
+        $posteos = Post::all();
+        return view('articulos', compact('posteos'));
     }
 }
