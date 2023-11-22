@@ -29,6 +29,9 @@ Route::resource('/nosotros',NosotrosController::class);
 
 Route::resource('/articulos',ArticulosController::class);
 
+Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
+
+
 Route::resource('/productos',ProductosController::class);
 
 Route::resource('/contacto',ContactoController::class);
