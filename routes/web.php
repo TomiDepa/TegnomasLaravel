@@ -29,7 +29,6 @@ Route::resource('/nosotros',NosotrosController::class);
 
 Route::resource('/articulos',ArticulosController::class);
 
-Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
 
 
 Route::resource('/productos',ProductosController::class);
@@ -39,5 +38,7 @@ Route::resource('/contacto',ContactoController::class);
 Route::resource('/administracion',AdministracionController::class);
 
 Route::resource('/posts',PostController::class);
+
+Route::get('/posts/{post}', 'App\Http\Controllers\PostController@show')->name('posts.show');
 
 Route::resource('/admUsuario',UserController::class);

@@ -31,7 +31,7 @@ class PostController extends Controller
     public function store(StorePostRequest $request)
     {
         Post::create($request->all());
-        return redirect(route('Posts.admPost'));
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -56,7 +56,7 @@ class PostController extends Controller
     public function update(UpdatePostRequest $request, Post $post)
     {
         $post->update($request->all());
-        return redirect()->route('Posts.admPost');
+        return redirect()->route('posts');
     }
 
     /**
