@@ -11,7 +11,7 @@
         </p>
         <div class="admBotones">
             <a href="/posts" class="boton">POST</a>
-            <a href="/admUsuario" class="boton">USUARIOS</a>
+            <a href="/users" class="boton">USUARIOS</a>
         </div>
     </section>
 </main>

@@ -9,54 +9,44 @@
         </div>
     </section>
     <section>
-        <div class="admBotones">
-            <button class="boton">Modificar</button>
-            <button class="boton">Borrar</button>
-            <button class="boton">Agregar</button>
-            <button class="boton">Admin</button>
-        </div>
-        <div>
-            <table class="tabla2">
-                <tr>
-                    <th></th>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Email</th>
-                    <th>Contraseña</th>
-                    <th>Rol</th>
-                    <th>Fecha</th>
-                </tr>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
+        <div class="tabla2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($users as $user)
+                    <tr>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>
+                            @foreach($rols as $rol)
+                                @if($user->id_rol == $rol->id_rol)
+                                    @php
+                                        $nombreRol = $rol->nombre;
+                                        break;
+                                    @endphp
+                                @endif
+                            @endforeach
+                            {{ $nombreRol }}
+                        </td>
+                        <td>
+                            <a href="{{ route('users.show', $user) }}" class="boton">Ver</a>
+                            <a href="{{ route('users.edit', $user) }}" class="boton">Editar</a>
+                            <form action="{{ route('users.destroy', $user) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="boton" onclick="return confirm('¿Seguro qué quieres eliminarlo?')">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
         </div>
     </section>
