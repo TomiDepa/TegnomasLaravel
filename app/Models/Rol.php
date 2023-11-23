@@ -11,7 +11,10 @@ class Rol extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['nombre','id_permiso'];
+    protected $attributes = [
+        'id_permiso' => '1'
+    ];
 
     /*RELACIONES*/
     public function user(): BelongsTo{

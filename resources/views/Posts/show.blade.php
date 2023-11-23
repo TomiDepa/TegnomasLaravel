@@ -13,13 +13,12 @@
     </section>
     <section class="p-3">
         <div class="d-flex justify-content-between tm-pt-45">
-            <span class="tm-color-primary">Computadoras. Reseñas. Gama Alta</span>
-            <span class="tm-color-primary">Septiembre 23, 2023</span>
+            <span class="tm-color-primary"></span>
+            <span class="tm-color-primary">{{ $post-> updated_at}}</span>
         </div>
         <hr>
         <div class="d-flex justify-content-between">
             <span>1 comentario</span>
-            <span>by Admin Tomás</span>
         </div>
         <div class="caja-comentarios">
             <div class="hacer-comentario">

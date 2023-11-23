@@ -41,4 +41,6 @@ Route::resource('/posts',PostController::class);
 
 Route::get('/posts/{post}', 'App\Http\Controllers\PostController@show')->name('posts.show');
 
-Route::resource('/admUsuario',UserController::class);
+Route::resource('/users',UserController::class);
+
+Route::get('/users/{user}', 'App\Http\Controllers\UserController@show')->name('users.show');

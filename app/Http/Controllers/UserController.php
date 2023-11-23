@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Rol;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 
@@ -13,7 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admUsuario');
+        $users = User::all();
+        $rols = Rol::all();
+        return view('Users.admUsuario', compact('users','rols'));
     }
 
     /**
@@ -21,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('Users.create');
     }
 
     /**
@@ -29,7 +32,8 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        //
+        User::create($request->all());
+        return redirect(route('users.index'));
     }
 
     /**
@@ -37,7 +41,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('Users.show',compact('user'));
     }
 
     /**
@@ -45,15 +49,17 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $rols = Rol::all(); // Obtener todos los roles
+        return view('Users.edit',compact('user','rols'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateUserRequest $request, User $categoria)
+    public function update(UpdateUserRequest $request, User $user)
     {
-        //
+        $user->update($request->all());
+        return redirect()->route('users.index');
     }
 
     /**
@@ -61,6 +67,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('users.index');
     }
 }
