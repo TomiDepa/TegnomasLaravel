@@ -8,8 +8,8 @@
         <form action="{{ route('posts.store') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="Titulo">Titulo:</label>
-                <input type="text" name="Titulo" class="form-control">
+                <label for="titulo">Titulo:</label>
+                <input type="text" name="titulo" class="form-control">
             </div>
             <div class="form-group">
                 <label for="descripcion">Descripción:</label>
