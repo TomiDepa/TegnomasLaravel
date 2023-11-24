@@ -7,6 +7,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NosotrosController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\RolController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,3 +45,5 @@ Route::get('/posts/{post}', 'App\Http\Controllers\PostController@show')->name('p
 Route::resource('/users',UserController::class);
 
 Route::get('/users/{user}', 'App\Http\Controllers\UserController@show')->name('users.show');
+
+Route::resource('/rols', RolController::class);

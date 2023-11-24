@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\rol;
 use App\Http\Requests\StorerolRequest;
 use App\Http\Requests\UpdaterolRequest;
+use App\Models\Permiso;
 
 class RolController extends Controller
 {
@@ -13,7 +14,9 @@ class RolController extends Controller
      */
     public function index()
     {
-        //
+        $rols = Rol::all();
+        $permisos = Permiso::all();
+        return view('Rols.index', compact('rols','permisos'));
     }
 
     /**
@@ -21,7 +24,7 @@ class RolController extends Controller
      */
     public function create()
     {
-        //
+        return view('Rols.create');
     }
 
     /**
@@ -29,7 +32,8 @@ class RolController extends Controller
      */
     public function store(StorerolRequest $request)
     {
-        //
+        Rol::create($request->all());
+        return redirect(route('rols.index'));
     }
 
     /**
@@ -37,7 +41,7 @@ class RolController extends Controller
      */
     public function show(rol $rol)
     {
-        //
+
     }
 
     /**
@@ -45,7 +49,8 @@ class RolController extends Controller
      */
     public function edit(rol $rol)
     {
-        //
+        $permisos = Permiso::all();
+        return view('Rols.edit', compact('rol'));
     }
 
     /**
@@ -53,7 +58,8 @@ class RolController extends Controller
      */
     public function update(UpdaterolRequest $request, rol $rol)
     {
-        //
+        $rol->update($request->all());
+        return redirect()->route('rols.index');
     }
 
     /**
@@ -61,6 +67,7 @@ class RolController extends Controller
      */
     public function destroy(rol $rol)
     {
-        //
+        $rol->delete();
+        return redirect()->route('rols.index');
     }
 }

@@ -49,7 +49,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        $rols = Rol::all(); // Obtener todos los roles
+        $rols = Rol::all();
         return view('Users.edit',compact('user','rols'));
     }
 
