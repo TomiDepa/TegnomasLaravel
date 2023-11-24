@@ -12,6 +12,8 @@
         <div class="admBotones">
             <a href="/posts" class="boton">POST</a>
             <a href="/users" class="boton">USUARIOS</a>
+            <a href="/rols" class="boton">ROLES</a>
+            <a href="/categorias" class="boton">CATEGORIAS</a>
         </div>
     </section>
 </main>
