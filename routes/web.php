@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdministracionController;
 use App\Http\Controllers\ArticulosController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NosotrosController;
@@ -35,5 +36,6 @@ Route::get('/posts/{post}', 'App\Http\Controllers\PostController@show')->name('p
 Route::resource('/users',UserController::class);
 Route::get('/users/{user}', 'App\Http\Controllers\UserController@show')->name('users.show');
 Route::resource('/rols', RolController::class);
+Route::resource('/categorias', CategoriaController::class);
 
 
