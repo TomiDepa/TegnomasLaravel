@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($rols as $rol)
+                    @foreach($rols as $rol) 
                         <tr>
                             <td>{{ $rol->nombre }}</td>
                             <td>
@@ -37,9 +37,9 @@
                                 {{ $nombrePermiso }}
                             </td>
                             <td>
-                                <a href="{{ route('rols.edit', $rol) }}" class="boton">Editar</a>
+                                <a href="{{ route('rols.edit', $rol->id_rol) }}" class="boton">Editar</a>
 
-                                <form action="{{ route('rols.destroy', $rol) }}" method="POST">
+                                <form action="{{ route('rols.destroy', $rol->id_rol) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="boton" onclick="return confirm('¿Seguro qué quieres eliminarlo?')">Eliminar</button>

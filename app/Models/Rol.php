@@ -11,6 +11,7 @@ class Rol extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'id_rol';
     protected $fillable = ['nombre','id_permiso'];
     protected $attributes = [
         'id_permiso' => '1'
