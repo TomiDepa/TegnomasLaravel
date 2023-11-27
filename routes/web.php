@@ -25,25 +25,15 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::resource('/',IndexController::class);
-
 Route::resource('/nosotros',NosotrosController::class);
-
 Route::resource('/articulos',ArticulosController::class);
-
-
-
 Route::resource('/productos',ProductosController::class);
-
 Route::resource('/contacto',ContactoController::class);
-
 Route::resource('/administracion',AdministracionController::class);
-
 Route::resource('/posts',PostController::class);
-
 Route::get('/posts/{post}', 'App\Http\Controllers\PostController@show')->name('posts.show');
-
 Route::resource('/users',UserController::class);
-
 Route::get('/users/{user}', 'App\Http\Controllers\UserController@show')->name('users.show');
-
 Route::resource('/rols', RolController::class);
+
+

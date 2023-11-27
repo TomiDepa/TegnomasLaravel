@@ -24,7 +24,8 @@ class RolController extends Controller
      */
     public function create()
     {
-        return view('Rols.create');
+        $permisos = Permiso::all();
+        return view('Rols.create',compact('permisos'));
     }
 
     /**
@@ -50,7 +51,7 @@ class RolController extends Controller
     public function edit(rol $rol)
     {
         $permisos = Permiso::all();
-        return view('Rols.edit', compact('rol'));
+        return view('Rols.edit', compact('rol','permisos'));
     }
 
     /**
