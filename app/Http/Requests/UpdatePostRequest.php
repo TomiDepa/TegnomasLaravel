@@ -22,10 +22,6 @@ class UpdatePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'titulo' => 'required|string',
-            'descripcion' => 'required|string',
-            'id_categoria' => 'required|integer',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Regla para la carga de imágenes
             //
         ];
     }
