@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('titulo');
             $table->text('descripcion');
             $table->integer('id_categoria');
-            $table->integer('image_path')->nullable(); //columna para la ruta de la foto 
             $table->timestamps();
         });
     }
