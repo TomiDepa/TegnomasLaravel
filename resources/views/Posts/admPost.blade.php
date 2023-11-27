@@ -18,6 +18,8 @@
                     <tr>
                         <th>Titulo</th>
                         <th>Descrpcion</th>
+                        <th>Categoria</th>
+                        <th>Imagen</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -26,6 +28,18 @@
                     <tr>
                         <td>{{ $post->titulo }}</td>
                         <td>{{ $post->descripcion }}</td>
+                        <td>
+                        @foreach($categorias as $categoria)
+                                @if($post->id_categoria == $categoria->id)
+                                    @php
+                                        $nombreCategorias = $categoria->nombre;
+                                        break;
+                                    @endphp
+                                @endif
+                            @endforeach
+                            {{ $nombreCategorias }}
+                        </td>
+                        <td>{{ $post->image_path }}</td>
                         <td>
                             <a href="{{ route('posts.show', $post) }}" class="boton">Ver</a>
                             <a href="{{ route('posts.edit', $post) }}" class="boton">Editar</a>

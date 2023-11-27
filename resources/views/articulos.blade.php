@@ -5,9 +5,19 @@
         @foreach($posteos as $post)
             <div class="col">
                 <div class="card text-bg-success">
-                    <img src="" class="card-img-top" alt="Asus 300">
+                    <img src="{{ asset('storage/img/' . $post->image_path) }}" class="card-img-top" alt="Imagen del articulo">
                     <div class="card-body">
-                        <span class="position-relative top-0 start-0 tm-new-badge">Nuevo</span>
+                        <span class="position-relative top-0 start-0 tm-new-badge">
+                            @foreach($categorias as $categoria)
+                                @if($post->id_categoria == $categoria->id)
+                                    @php
+                                        $nombreCategorias = $categoria->nombre;
+                                        break;
+                                    @endphp
+                                @endif
+                            @endforeach
+                            {{ $nombreCategorias }}
+                        </span>
                         <h5 class="card-title">{{ $post->titulo }}</h5>
                         <p class="card-text">{{ $post->descripcion }}<a href="{{ route('posts.show', ['post' => $post->id]) }}">Ver más</a></p>
                         
@@ -17,7 +27,7 @@
                         </div>
                         <hr>
                         <div class="d-flex justify-content-between">
-                            <span>36 comments</span>
+                            <span>{{ $post-> updated_at}}</span>
                         </div>
                     </div>
                 </div>
