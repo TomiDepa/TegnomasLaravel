@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Models\Categoria;
 use Illuminate\Support\Facades\Storage;
-
 
 class PostController extends Controller
 {
@@ -16,7 +16,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('Posts.admPost', compact('posts'));
+        $categorias = Categoria::all();
+        return view('Posts.admPost', compact('posts','categorias'));
     }
    
     /**
@@ -32,19 +33,20 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $data = $request->all();
-        // logica para la carga de imagen 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('post_images', 'public');
-            $data['image_path'] = $imagePath;
+        $titulo = $request->input('titulo');
+        $descripcion = $request->input('descripcion');
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen');
+            $nombre_imagen = time() . '_' . $imagen->getClientOriginalName();
+            $ruta = $imagen->storeAs('public/img', $nombre_imagen);
         }
-        Post::create($data);
-        return redirect(route('posts.index'));
-       /* Post::create($request->all());
-        return redirect(route('posts.index'));*/
-
-        // logica para la carga de imagen 
+        $post = new Post();
+        $post->titulo = $titulo;
+        $post->descripcion = $descripcion;
+        $post->image_path = $nombre_imagen; 
+        $post->save();
         
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -52,7 +54,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('Posts.show', compact('post'));
+        $categorias = Categoria::all();
+        return view('Posts.show', compact('post','categorias'));
     }
 
     /**
@@ -60,7 +63,8 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('Posts.edit', compact('post'));
+        $categorias = Categoria::all();
+        return view('Posts.edit', compact('post','categorias'));
     }
 
     /**
@@ -68,23 +72,8 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        $data = $request->all();
-        
-        // logica para la nueva imagen
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('post_images', 'public');
-            $data['image_path'] = $imagePath;
-
-            // Eliminar la imagen anterior si existe
-            if ($post->image_path) {
-                // Asegúrarse de que sea eliminada la foto anteior 
-                Storage::disk('public')->delete($post->image_path);
-            }
-        }
-        $post->update($data);
+        $post->update($request->all());
         return redirect()->route('posts.index');
-       /* $post->update($request->all());
-        return redirect()->route('posts.index');*/
     }
 
     /**
@@ -92,11 +81,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        // elminar iamgen asociada antes de eliminar el post
         if ($post->image_path) {
             Storage::disk('public')->delete($post->image_path);
         }
-
         $post->delete();
         return redirect()->route('posts.index');
     }

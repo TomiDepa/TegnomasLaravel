@@ -4,7 +4,7 @@
 <main class="backgroundDegrade articulo">
     <section class="p-3">
         <div class="contenedor-imagen">
-            <img src="../img/Large_budget_1.jpg" class="img-fluid" alt="Asus 300">
+            <img src="{{ asset('storage/img/' . $post->image_path) }}" alt="Imagen del post">
         </div>
         <div>
             <h2>{{ $post->titulo }}</h2>
@@ -13,7 +13,17 @@
     </section>
     <section class="p-3">
         <div class="d-flex justify-content-between tm-pt-45">
-            <span class="tm-color-primary"></span>
+            <span class="tm-color-primary">
+                @foreach($categorias as $categoria)
+                    @if($post->id_categoria == $categoria->id)
+                        @php
+                            $nombreCategorias = $categoria->nombre;
+                            break;
+                        @endphp
+                    @endif
+                @endforeach
+                {{ $nombreCategorias }}
+            </span>
             <span class="tm-color-primary">{{ $post-> updated_at}}</span>
         </div>
         <hr>
