@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('descripcion');
             $table->integer('id_categoria');
             $table->timestamps();
+            $table->string('image_path');
         });
     }
 
