@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -27,7 +28,7 @@ class User extends Authenticatable
     ];
 
     protected $attributes = [
-        'id_rol' => '1'
+        'id_rol' => '3'
     ];
 
     /**
@@ -51,8 +52,8 @@ class User extends Authenticatable
     ];
 
     /*RELACIONES*/
-    public function rol(): HasOne{
-        return $this->hasOne(Rol::class);
+    public function rol(): BelongsTo{
+        return $this->belongsTo(Rol::class, 'id_rol');
     }
 
     public function post(): HasMany{

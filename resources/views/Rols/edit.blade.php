@@ -15,11 +15,7 @@
             <div class="form-group">
                 <label for="id_rol">Permiso:</label>
                 <select name="id_rol" id="id_rol" class="form-control">
-                @foreach($permisos as $permiso)
-                    @if ($rol->id_permiso == $permiso->id)
-                    <option value="{{ $permiso->id_permiso }}">{{$permiso->nombre}}</option>
-                    @endif
-                @endforeach
+                <option value="">Seleccione Permiso</option>
                 @foreach($permisos as $permiso)
                     <option value="{{ $permiso->id_permiso }}">{{ $permiso->nombre }}</option>
                 @endforeach
