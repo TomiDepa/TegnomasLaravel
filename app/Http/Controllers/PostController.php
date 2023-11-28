@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\Categoria;
+use App\Models\Comentario;
 use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
@@ -54,6 +55,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $post->load('comentarios.user');
+        $post->load('comentarios');
         $categorias = Categoria::all();
         return view('Posts.show', compact('post','categorias'));
     }

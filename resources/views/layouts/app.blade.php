@@ -56,6 +56,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/contacto">Contacto</a>
                             </li>
+                            @auth
+                            @if(auth()->user()->rol->nombre=='Admin' || auth()->user()->rol->nombre=='Editor')
+                            <li class="nav-item">
+                                <a class="nav-link" href="/administracion">Administracion</a>
+                            </li>
+                            @endif
+                            @endauth
                             @guest
                             @if (Route::has('login'))
                             <li class="nav-item">
