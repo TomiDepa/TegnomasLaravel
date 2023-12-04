@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Rol;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use Illuminate\Support\Facades\URL;
 
 class UserController extends Controller
 {
@@ -24,7 +25,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('Users.create');
+        $rols = Rol::all();
+        return view('Users.create',compact('rols'));
     }
 
     /**
@@ -49,6 +51,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        $previousUrl = URL::previous();
+        session(['previous_url' => $previousUrl]);
+
         $rols = Rol::all();
         return view('Users.edit',compact('user','rols'));
     }
@@ -59,7 +64,8 @@ class UserController extends Controller
     public function update(UpdateUserRequest $request, User $user)
     {
         $user->update($request->all());
-        return redirect()->route('users.index');
+        $previousUrl = session('previous_url');
+        return redirect($previousUrl);
     }
 
     /**

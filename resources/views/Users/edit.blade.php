@@ -14,15 +14,17 @@
             <label for="email">Email:</label>
             <input type="text" name="email" value="{{ $user->email }}" class="form-control">
         </div>
+        @rol('Admin')
         <div class="form-group">
             <label for="id_rol">Rol:</label>
             <select name="id_rol" id="id_rol" class="form-control">
-            <option value="">Seleccionar Rol</option>
+            <option value="{{ $user->id_rol }}">Seleccionar Rol</option>
             @foreach($rols as $rol)
                 <option value="{{ $rol->id_rol }}">{{ $rol->nombre }}</option>
             @endforeach
         </select>
         </div>
+        @endrol
         <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
     </form>
     </section>

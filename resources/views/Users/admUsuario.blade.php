@@ -9,6 +9,9 @@
         </div>
     </section>
     <section>
+        <div class="admBotones">
+            <a href="{{ route('users.create')}}"><button class="boton">Crear</button></a>
+        </div>
         <div class="tabla2">
             <table>
                 <thead>
@@ -36,7 +39,6 @@
                             {{ $nombreRol }}
                         </td>
                         <td>
-                            <a href="{{ route('users.show', $user) }}" class="boton">Ver</a>
                             <a href="{{ route('users.edit', $user) }}" class="boton">Editar</a>
                             <form action="{{ route('users.destroy', $user) }}" method="POST">
                                 @csrf
